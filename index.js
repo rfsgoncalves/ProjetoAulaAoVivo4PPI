@@ -36,7 +36,10 @@ app.use(express.urlencoded({ extended: true }));
 
 //configurar a aplicação para servir conteúdos estáticos
 //Permitindo que o conteúdo de uma determinada pasta seja visível para os usuários/clientes
-app.use(express.static('./pages/public'));
+//app.use(express.static('./pages/public'));
+//ajuste para executar no vercel
+app.use(express.static(path.join(process.cwd(), 'pages/public')));
+
 
 const porta = 3000;
 const host = '0.0.0.0'; //ip refere-se a todas as interfaces (placas de rede) locais
