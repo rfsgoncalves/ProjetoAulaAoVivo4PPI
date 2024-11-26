@@ -1,4 +1,5 @@
 import express from 'express';
+import path;
 //commonjs const express = require('express')
 
 //Importando session do módulo express-session;
